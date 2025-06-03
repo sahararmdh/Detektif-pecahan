@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detektif Pecahan</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            text-align: center;
+            background-color: #fefae0;
+            color: #333;
+            margin: 0;
+            padding: 50px;
+        }
+        h1 {
+            color: #d62828;
+        }
+        #timer {
+            font-size: 24px;
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+    <h1>Selamat Datang di Game Detektif Pecahan!</h1>
+    <p id="timer">Waktu: 60 detik</p>
+
+    <script>
+        let timeLeft = 60;
+        let timer = setInterval(() => {
+            timeLeft--;
+            document.getElementById("timer").innerText = `Waktu: ${timeLeft} detik`;
+            if (timeLeft <= 0) {
+                clearInterval(timer);
+                alert("Waktu habis!");
+            }
+        }, 1000);
+    </script>
+</body>
+</html>
